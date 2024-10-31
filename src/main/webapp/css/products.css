@@ -1,0 +1,298 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 70px; /* Khoảng cách để không bị che bởi header */
+    background-color: #f9f9f9; /* Màu nền nhẹ */
+}
+
+/* Style cho banner trên cùng */
+.top-banner {
+    background-color: #228B22;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: fixed; /* Đặt header cố định khi cuộn */
+    top: 0; /* Đặt header ở trên cùng */
+    width: 100%; /* Đảm bảo header chiếm toàn bộ chiều rộng */
+    z-index: 1000; /* Đặt header nằm trên các phần tử khác */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ để phân biệt header với nội dung */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép các phần tử trong container tự động xuống hàng */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 20px;
+    position: relative; /* Giữ vị trí cho menu xổ */
+}
+
+nav li a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: #14e214;
+    color: #fff;
+}
+
+/* Product menu styles */
+.product-menu {
+    background-color: #fff; /* Màu nền của khung */
+    padding: 10px; /* Padding cho khung */
+    border: 1px solid #ddd; /* Đường viền cho khung */
+    border-radius: 5px; /* Bo góc cho khung */
+}
+
+/* Căn chỉnh danh mục và sản phẩm nằm ngang */
+.categories-and-products {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: flex-start; /* Căn trái khung danh mục */
+    align-items: flex-start; /* Căn chỉnh các khung ở đầu */
+    margin-bottom: 20px; /* Khoảng cách giữa các phần */
+}
+
+/* Categories container styles */
+.product-categories {
+    flex: 1; /* Chiếm không gian theo tỉ lệ 1 */
+    max-width: 250px; /* Chiều rộng tối đa của khung danh mục */
+    height: auto; /* Chiều cao tự động để chứa nội dung */
+    padding: 20px; /* Padding bên trong */
+    background-color: #ffffff; /* Màu nền */
+    border: 1px solid #ddd; /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử bên trong */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+}
+
+.product-categories h2 {
+    font-size: 24px; /* Kích thước tiêu đề */
+    color: #333; /* Màu chữ cho tiêu đề */
+    margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
+    text-align: left; /* Căn trái tiêu đề */
+}
+
+.product-categories ul {
+    list-style: none; /* Ẩn dấu đầu dòng */
+    padding: 0; /* Không có khoảng cách bên trong */
+    flex-grow: 1; /* Chiếm toàn bộ không gian còn lại */
+}
+
+.product-categories li {
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+
+.product-categories a {
+    text-decoration: none; /* Không gạch chân */
+    color: #007bff; /* Màu chữ cho liên kết */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển tiếp khi hover */
+    display: block; /* Đặt thành khối để dễ dàng nhấp chuột */
+    padding: 5px; /* Padding cho các liên kết */
+    border-radius: 5px; /* Bo góc cho các liên kết */
+    text-align: left; /* Căn trái chữ */
+}
+
+.product-categories a:hover {
+    color: #0056b3; /* Màu khi hover */
+    background-color: #f0f0f0; /* Màu nền khi hover */
+}
+
+.product-grid {
+    flex: 3; /* Chiếm không gian theo tỉ lệ 3 */
+    display: grid; /* Sử dụng grid cho các sản phẩm */
+    grid-template-columns: repeat(3, 1fr); /* Hiển thị 3 cột */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    padding: 10px 0;
+    justify-content: start; 
+}
+
+/* Khung chứa sản phẩm */
+.products-container {
+    background-color: #ffffff; /* Màu nền của khung */
+    border: 1px solid #ddd; /* Đường viền cho khung */
+    border-radius: 5px; /* Bo góc cho khung */
+    padding: 20px; /* Khoảng cách bên trong khung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ cho khung */
+    margin-bottom: 20px; /* Khoảng cách dưới khung */
+}
+
+/* Product grid styles */
+.store-page {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+.product-card {
+    background-color: #ffffff; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px; 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; 
+    margin: 15px 0; /* Khoảng cách trên và dưới của khung sản phẩm */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.product-card img {
+    width: 100%; /* Đặt chiều rộng là 100% để vừa với khung sản phẩm */
+    height: 200px; /* Đặt chiều cao cố định */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng và cắt bớt nếu cần */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    font-size: 18px; 
+    color: #333; 
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 16px; 
+    color: #16a085;
+    font-weight: bold;
+    margin: 10px 0; 
+}
+
+.product-card:hover {
+    transform: scale(1.05); 
+}
+
+.buy-button {
+    padding: 12px 20px; 
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; 
+    margin-top: 10px; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.buy-button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+/* Sort menu styles */
+.sort-menu {
+    display: flex;
+    justify-content: flex-end; 
+    margin-right: 20px; 
+    align-items: center;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút pagination */
+    margin: 20px auto; /* Khoảng cách phía trên và dưới, tự động căn giữa */
+    width: fit-content; /* Đảm bảo chiều rộng của phân trang tự động */
+}
+
+.pagination-button {
+    border: none;
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 10px 15px;
+    margin: 0 5px; /* Khoảng cách giữa các nút */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển tiếp */
+}
+
+.pagination-button:hover {
+    background-color: #ddd; /* Màu nền khi hover */
+    transform: scale(1.05); /* Phóng to khi hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tùy chỉnh cho màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-and-products {
+        flex-direction: column; /* Đặt thành cột trên màn hình nhỏ */
+    }
+
+    .product-categories {
+        max-width: none; /* Đặt chiều rộng tối đa không có */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên màn hình nhỏ */
+    }
+    
+    /*lọc*/
+    .price-filter {
+    display: flex;               /* Sử dụng flexbox để sắp xếp các phần tử theo hàng */
+    align-items: center;        /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px;        /* Khoảng cách phía dưới */
+}
+
+.price-filter h5 {
+    margin-right: 10px;         /* Khoảng cách bên phải của tiêu đề */
+    font-size: 16px;            /* Kích thước chữ cho tiêu đề */
+}
+
+.price-filter label {
+    display: none;              /* Ẩn nhãn nếu không cần thiết */
+}
+
+.price-filter input {
+    width: 80px;                /* Chiều rộng cho ô nhập liệu "TỪ" và "ĐẾN" */
+    padding: 5px;              /* Khoảng cách bên trong */
+    margin-right: 5px;         /* Khoảng cách bên phải giữa các ô nhập liệu */
+    border: 1px solid #ccc;    /* Viền cho ô nhập liệu */
+    border-radius: 4px;        /* Bo góc */
+}
+
+.price-filter button {
+    padding: 5px 10px;         /* Khoảng cách bên trong cho nút lọc */
+    background-color: #4CAF50; /* Màu nền cho nút */
+    color: white;              /* Màu chữ cho nút */
+    border: none;              /* Không viền cho nút */
+    border-radius: 4px;        /* Bo góc */
+    cursor: pointer;           /* Con trỏ chuột khi di chuột qua nút */
+}
+
+.price-filter button:hover {
+    background-color: #45a049; /* Màu nền khi di chuột qua nút */
+}
+
+}
+
